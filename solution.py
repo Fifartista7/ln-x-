@@ -1,5 +1,4 @@
-# CMSC389O Spring 2020
-# HW3: Searching & Sorting -- Implement Natural Logarithm
+# Implement Natural Logarithm
 
 # Description:
 # Implement the ln() function, but don't use the library log functions or integration functions.
@@ -19,15 +18,7 @@
 # ln(0) should return the floating point negative infinity float('-inf')
 # ln(x) for negative x should raise ValueError (it's an invalid input)
 
-# Running the public tests:
-# python3 PublicTests.py
 
-# Submit server notes:
-# 2 of the release tests (9 and 10) are performance tests.
-# Failing either of the last 2 tests (red box) is probably not due to
-# correctness issues if you are passing the other tests.
-
-# for student use
 import math 
 
 EPSILON: float = 1e-6
@@ -91,6 +82,6 @@ def student_ln(x: float) -> float:
     # Observations: the algorightm seems to fail in precision of more than EPSILON when the value is very small (e.g. less than 0.1)
     # and some other values like 0.4 and 0.6, even though it works for 0.3 and 0.5, for some reason. Any feedback is appreciated. 
 
-    # Time Complexity: O(logn) - because of the binary search 
+    # Time Complexity: O(log(n/epsilon)) - because of the binary search and epsilon
     # Space Complexity: O(1) - no additional memory used besides local variables
     # By Josue Arana
